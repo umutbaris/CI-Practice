@@ -1,0 +1,12 @@
+sudo: required
+language: php
+  - 7.1
+services:
+  - docker
+
+before_install:
+
+before_script: 
+  - composer install
+
+script: phpunit

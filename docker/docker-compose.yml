@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  web:
+    image: nginx
+    ports:
+        - "8080:80"
+    volumes:
+        - ./../back-end:/var/www/html
+        - ./conf.d:/etc/nginx/conf.d
+    links:
+        - php
+  php:
+    image: php:7-fpm
+    volumes:
+    - ./../back-end:/var/www/html

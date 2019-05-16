@@ -1,6 +1,6 @@
 FROM php:7.2-fpm-alpine
 
-COPY src/ /srv/gits/web
+COPY back-end/ /srv/gits/web
 
 WORKDIR /srv/gits/web
 

@@ -1,6 +1,6 @@
 FROM nginx:1.15-alpine
 
-COPY docker/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
+COPY docker/nginx/conf.d/site.conf /etc/nginx/conf.d/site.conf
 
 WORKDIR /etc/nginx/
 

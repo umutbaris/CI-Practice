@@ -8,15 +8,10 @@ services:
       dockerfile: docker/nginx/Dockerfile
     ports:
         - "8080:80"
-    volumes:
-        - ./../back-end:/var/www/html
-        - ./nginx/conf.d:/etc/nginx/conf.d
     links:
         - php
   php:
-    image: php:7-fpm
+    image: php-fpm
     build:
       context: .
       dockerfile: docker/php-fpm/Dockerfile
-    volumes:
-    - ./../back-end:/var/www/html

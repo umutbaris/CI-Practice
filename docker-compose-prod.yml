@@ -11,7 +11,7 @@ services:
     links:
         - php
   php:
-    image: php-fpm
+    image: php:7-fpm
     build:
       context: .
       dockerfile: docker/php-fpm/Dockerfile

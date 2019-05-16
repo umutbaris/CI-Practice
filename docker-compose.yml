@@ -5,7 +5,7 @@ services:
     image: nginx
     build:
       context: .
-      dockerfile: ./docker/nginx/Dockerfile
+      dockerfile: docker/nginx/Dockerfile
     ports:
         - "8080:80"
     volumes:
@@ -13,9 +13,9 @@ services:
     links:
         - php
   php:
-    image: php:-fpm
+    image: php:7-fpm
     build:
       context: .
-      dockerfile: ./docker/php-fpm/Dockerfile
+      dockerfile: docker/php-fpm/Dockerfile
     volumes:
     - ./back-end:/var/www/html

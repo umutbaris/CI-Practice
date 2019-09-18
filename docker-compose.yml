@@ -7,13 +7,13 @@ services:
       context: .
       dockerfile: docker/nginx/Dockerfile
     ports:
-        - "8080:80"
+        - "80:80"
     volumes:
         - ./docker/nginx/conf.d:/etc/nginx/conf.d
     links:
         - php
   php:
-    image: php:7-fpm
+    image: fpm
     build:
       context: .
       dockerfile: docker/php-fpm/Dockerfile
